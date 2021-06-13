@@ -1,25 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import LogbookContent from "../components/LogbookContent";
 import Navbar from "../components/Navbar";
 
-// Import DB From firebase
-import { db } from "../database/firebase";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchStudents } from "../redux/actions/students";
 
 function Logbook() {
-  const [students, setStudents] = useState([]);
+  const students = useSelector((state) => state.studentsData.students);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    db.collection("students")
-      .get()
-      .then((snapshot) => {
-        const students = [];
-        snapshot.forEach((doc) => {
-          const data = doc.data();
-          students.push(data);
-        });
-        setStudents(students);
-      })
-      .catch((error) => console.log(error));
+    dispatch(fetchStudents());
   }, []);
 
   return (
