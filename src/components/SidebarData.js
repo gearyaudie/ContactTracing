@@ -22,16 +22,16 @@ export const SidebarData = [
     icon: <FaIcons.FaBookOpen />,
     cName: "nav-text",
   },
-  {
-    title: "Register",
-    path: "/register",
-    icon: <FaIcons.FaAddressBook />,
-    cName: "nav-text",
-  },
-  {
-    title: "Logout",
-    path: "/login",
-    icon: <AiIcons.AiOutlineLogout />,
-    cName: "nav-text",
-  },
+  // {
+  //   title: "Register",
+  //   path: "/register",
+  //   icon: <FaIcons.FaAddressBook />,
+  //   cName: "nav-text",
+  // },
+  // {
+  //   title: "Logout",
+  //   path: "/login",
+  //   icon: <AiIcons.AiOutlineLogout />,
+  //   cName: "nav-text",
+  // },
 ];
