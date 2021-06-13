@@ -15,22 +15,22 @@ import ForgotPassword from "./authentication/ForgotPassword";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Import Private Route Context //
-import PrivateRoute from "./context/PrivateRoute";
+// import PrivateRoute from "./context/PrivateRoute";
 import AuthProvider from "./context/AuthContext";
 
 function App() {
   return (
     <Router>
-      <div className='App'>
+      <div className="App">
         <AuthProvider>
           <Switch>
-            <Route path='/signup' component={SignUp} />
+            {/* <Route path='/signup' component={SignUp} />
             <Route path='/login' component={LogIn} />
             <Route path='/forgot-password' component={ForgotPassword} />
-            <Route path='/register' component={Register} />
-            <PrivateRoute exact path='/' component={Home} />
-            <PrivateRoute path='/about' exact component={About} />
-            <PrivateRoute path='/logbook' exact component={Logbook} />
+            <Route path='/register' component={Register} /> */}
+            <Route exact path="/" component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/logbook" exact component={Logbook} />
           </Switch>
         </AuthProvider>
       </div>
